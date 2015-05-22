@@ -36,7 +36,8 @@ cacheSolve <- function(x, ...) {
         if (!is.null(inv)) {
                 message("retrieving cached data ...")
                 return(inv)
-        }        
+        }  
+        
         data <- x$get()
         inv <-solve(data)
         x$setinv(inv)
